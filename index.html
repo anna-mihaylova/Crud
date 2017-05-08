@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="asset/css/reset.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="asset/app/Application.js"></script>
+    <script type="text/javascript" src="asset/app/FormPanel.js"></script>
+    <script type="text/javascript" src="asset/app/ListPanel.js"></script>
+    <script type="text/javascript" src="asset/app/LoginPanel.js"></script>
+    <script type="text/javascript" src="asset/app/PanelManeger.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div class="panel" id="login-panel">
+            <form action="server/server.php" method="post">
+                <h2><span><i class="fa fa-lock" aria-hidden="true"></i></span>Login</h2>
+                <label for="username"><span><i class="fa fa-user" aria-hidden="true"></i></span>User name:</label>
+
+                <input type="text" name="username" placeholder="user name" id="username">
+                <label for="password"><span><i class="fa fa-key" aria-hidden="true"></i></span>Password:</label>
+                <input type="password" name="password" placeholder="password" id="password">
+                <button id="login-btn">Login</button>
+                <div id="result"></div>
+            </form>
+        </div>
+        <div class="panel" id="list-panel">
+            <table>
+                <thead>
+
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Quality</th>
+                    <th>Price</th>
+                    <th><button id="add-new">New</button></th>
+                </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+        <div class="panel" id="form-panel">
+            <form action="">
+                <h2><span><i class="fa fa-plus-circle" aria-hidden="true"></i></span>Add new</h2>
+                <label for="name"><span><i class="fa fa-product-hunt" aria-hidden="true"></i></span>Name:</label>
+                <input type="text" name="name" placeholder="name" id="name">
+                <label for="quantity"><span><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></span>Quality:</label>
+                <input type="text" name="quality" placeholder="quantity"  id="quantity">
+                <label for="price"><span><i class="fa fa-usd" aria-hidden="true"></i></span>Price:</label>
+                <input type="text" name="price" placeholder="price" id="price" >
+                <button id="save-btn">Save</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
